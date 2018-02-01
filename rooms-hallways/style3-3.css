@@ -1,0 +1,82 @@
+html, body {
+	background-color: red;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.click {
+	display: block;
+	position: absolute;
+	z-index: 100;
+	background-color: red;
+	height: 100%;
+	width: 25%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.text {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	font-size: 30px;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	color: white;
+}
+
+.left {
+	display: block;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	right: 0px;
+	background-color: whitesmoke;
+    -webkit-mask-image: url(trapezoid-l.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: right;
+    -webkit-mask-size: 100% auto;
+    margin: 0;
+	padding: 0;
+}
+
+.container-l {
+	display: inline-block;
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	left: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.right {
+	display: block;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	right: 0px;
+	background-color: blue;
+    -webkit-mask-image: url(trapezoid-r.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: left;
+    -webkit-mask-size: 100% auto;
+    margin: 0;
+	padding: 0;
+}
+
+.container-r {
+	display: inline-block;
+	position: absolute;
+	height: 100%;
+	width: 50%;
+	right: 0;
+	margin: 0;
+	padding: 0;
+}
