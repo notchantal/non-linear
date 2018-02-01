@@ -1,5 +1,5 @@
 html, body {
-	background-color: whitesmoke;
+	background: linear-gradient(to bottom, #273746, #000000, #273746);
 	height: 100%;
 	width: 100%;
 	margin: 0;
@@ -10,7 +10,7 @@ html, body {
 	display: block;
 	position: absolute;
 	z-index: 100;
-	background-color: whitesmoke;
+	background: linear-gradient(to bottom, #273746, #000000, #273746);
 	height: 100%;
 	width: 25%;
 	left: 50%;
@@ -26,7 +26,7 @@ html, body {
 	font-size: 30px;
 	transform: translate(-50%, -50%);
 	text-align: center;
-	color: black;
+	color: white;
 }
 
 .left {
@@ -35,7 +35,7 @@ html, body {
 	height: 100%;
 	width: 100%;
 	right: 0px;
-	background-color: blue;
+	background: linear-gradient(to right, #1E8449 0%, #000000 70%);
     -webkit-mask-image: url(trapezoid-l.svg);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: right;
@@ -60,7 +60,7 @@ html, body {
 	height: 100%;
 	width: 100%;
 	right: 0px;
-	background-color: red;
+	background: linear-gradient(to left, #2471A3 0%, #000000 70%);
     -webkit-mask-image: url(trapezoid-r.svg);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: left;
@@ -77,4 +77,22 @@ html, body {
 	right: 0;
 	margin: 0;
 	padding: 0;
+}
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0.08;
 }
