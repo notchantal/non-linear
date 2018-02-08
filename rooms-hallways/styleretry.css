@@ -1,0 +1,147 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	z-index: -2;
+}
+
+.left {
+	display: block;
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	left: 0;
+	background: linear-gradient(to right, #1E8449, #000000 65%);
+	z-index: -1;
+}
+
+.right {
+	display: block;
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	right: 0;
+	background: linear-gradient(to left, #5DADE2, #000000 65%);
+	z-index: -1;
+}
+
+.container-c {
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 250px;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 0;
+	padding: 0;
+	z-index: -1;
+}
+
+.center {
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+    height: 100%;
+    background-color: black;
+;
+}
+
+.container-t {
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	left: 50%;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	transform: translateX(-655px);
+	z-index: 1;
+}
+
+.top {
+	display: block;
+	position: relative;
+	right: 0px;
+	margin: 0;
+	padding: 0;
+	width: 250px;
+    border-top: 275px solid;
+    border-left: 530px solid transparent;
+    border-right: 530px solid transparent;
+	color: black;
+}
+
+.container-b {
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	left: 50%;
+	margin: 0;
+	padding: 0;
+	bottom: 0;
+	transform: translateX(-655px);
+	z-index: 1;
+}
+
+.bottom {
+	display: block;
+	position: relative;
+	right: 0px;
+    margin: 0;
+	padding: 0;
+	width: 250px;
+    border-bottom: 275px solid;
+    border-left: 530px solid transparent;
+    border-right: 530px solid transparent;
+	color: black;
+}
+
+.fullscreen-bg {
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    top: 0;
+    left: 0;
+    opacity: 0.05;
+    z-index: -100;
+}
+
+.text {
+	position: absolute;
+	display: block;
+	z-index: 500;
+	width: 100%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%);
+	height: 50%;
+	padding: 0;
+	margin: 0;
+	font-size: .5em;
+	font-family: 'Pirata One';
+}
+
+p:hover {
+	cursor: pointer;
+	color: grey;
+}
+
+p {
+	color: white;
+	z-index: 100;
+	-webkit-margin-before: 0;
+	-webkite-margin-after: 0;
+	text-align: center;
+	line-height: 0px;
+}
+
