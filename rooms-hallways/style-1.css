@@ -112,7 +112,7 @@ html, body {
 .fullscreen-bg__video {
     top: 0;
     left: 0;
-    opacity: 0.05;
+    opacity: 0.02;
     z-index: -100;
 }
 
@@ -120,28 +120,28 @@ html, body {
 	position: absolute;
 	display: block;
 	z-index: 500;
-	width: 100%;
+	width: 250px;
 	left: 50%;
 	top: 50%;
-	transform: translate(-50%);
-	height: 50%;
+	transform: translate(-50%, -.75em);
+	height: auto;
 	padding: 0;
 	margin: 0;
-	font-size: .5em;
-	font-family: 'Pirata One';
+	font-size: .15em;
+	font-family: 'Homemade Apple', sans-serif;
 }
 
 p:hover {
 	cursor: pointer;
-	color: grey;
+	color: white;
 }
 
 p {
-	color: white;
+	color: darkgrey;
 	z-index: 100;
 	-webkit-margin-before: 0;
 	-webkite-margin-after: 0;
 	text-align: center;
-	line-height: 0px;
+	line-height: auto;
 }
 
