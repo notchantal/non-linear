@@ -14,7 +14,6 @@ html, body {
 	height: 100%;
 	left: 0;
 	background: linear-gradient(to right, #1E8449, #000000 65%);
-	z-index: -1;
 }
 
 .right {
@@ -24,19 +23,18 @@ html, body {
 	height: 100%;
 	right: 0;
 	background: linear-gradient(to left, #5DADE2, #000000 65%);
-	z-index: -1;
 }
 
 .container-c {
 	display: block;
 	position: absolute;
 	height: 100%;
-	width: 250px;
+	width: 75px;
 	left: 50%;
 	transform: translateX(-50%);
 	margin: 0;
 	padding: 0;
-	z-index: -1;
+	z-index: 1;
 }
 
 .center {
@@ -46,7 +44,6 @@ html, body {
 	padding: 0;
     height: 100%;
     background-color: black;
-;
 }
 
 .container-t {
@@ -57,7 +54,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 	top: 0;
-	transform: translateX(-655px);
+	transform: translateX(-560px);
 	z-index: 1;
 }
 
@@ -67,8 +64,8 @@ html, body {
 	right: 0px;
 	margin: 0;
 	padding: 0;
-	width: 250px;
-    border-top: 275px solid;
+	width: 75px;
+    border-top: 250px solid;
     border-left: 530px solid transparent;
     border-right: 530px solid transparent;
 	color: black;
@@ -82,7 +79,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 	bottom: 0;
-	transform: translateX(-655px);
+	transform: translateX(-560px);
 	z-index: 1;
 }
 
@@ -92,8 +89,8 @@ html, body {
 	right: 0px;
     margin: 0;
 	padding: 0;
-	width: 250px;
-    border-bottom: 275px solid;
+	width: 75px;
+    border-bottom: 250px solid;
     border-left: 530px solid transparent;
     border-right: 530px solid transparent;
 	color: black;
@@ -120,24 +117,24 @@ html, body {
 	position: absolute;
 	display: block;
 	z-index: 500;
-	width: 250px;
+	width: 75px;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -.75em);
 	height: auto;
 	padding: 0;
 	margin: 0;
-	font-size: .15em;
+	font-size: 0.1em;
 	font-family: 'Homemade Apple', sans-serif;
 }
 
 p:hover {
 	cursor: pointer;
-	color: white;
+	color: #FF7000;
 }
 
 p {
-	color: darkgrey;
+	color: white;
 	z-index: 100;
 	-webkit-margin-before: 0;
 	-webkite-margin-after: 0;
