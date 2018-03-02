@@ -91,6 +91,11 @@ button:active {
 #download {
 	background-color: #73C6B6;
 	margin-top: 22px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+	margin-bottom: 40px;
 }
 
 #download:active {
