@@ -6,14 +6,47 @@ html, body {
 	padding: 0;
 }
 
-div {
+.icon {
+	position: absolute;
+	display: block;
+	padding-left: 20px;
+	padding-top: 13px;
+	height: 40px;
+}
+
+h3 {
+	position: absolute;
+	left: 70px;
+	margin:0;
+	padding: 0;
+	top: 26px;
+	font-weight: normal;
+	font-family: sans-serif;
+	color:#e75f78; 
+	font-size: 16px;
+	letter-spacing: .5px;
+}
+
+.follow {
+	position: absolute;
+	display: block;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	right: 0;
+	top: 0;
+	padding-right: 20px;
+	padding-top: 20px;
+}
+
+.main {
 	display: block;
 	position: relative;
 	text-align: center;
 	margin: 0;
 	padding: 0;
 	left: 50%;
-	top: 50%;
+	top: 54%;
 	transform: translate(-50%, -50%);
 }
 
@@ -43,14 +76,23 @@ button {
 	letter-spacing: .5px;
  	cursor: pointer;
  	color: whitesmoke;
- 	background-color: #AD1457;
+ 	background-color: #e75f78;
   	border: none;
   	box-shadow: 0 6px grey;
-  	margin-top: 35px;
+  	margin-top: 80px;
 }
 
 button:active {
-  background-color: #880E4F;
+  background-color: #db2750;
   box-shadow: 0 3px grey;
   transform: translateY(4px);
+}
+
+#download {
+	background-color: #73C6B6;
+	margin-top: 22px;
+}
+
+#download:active {
+	background-color: #16A085;
 }

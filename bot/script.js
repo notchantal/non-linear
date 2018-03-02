@@ -1,4 +1,22 @@
-$("button").click(function(){
+function captureCurrentDiv()
+{
+    html2canvas([document.getElementById('main-container')], {   
+        onrendered: function(canvas)  
+        {
+            var img = canvas.toDataURL()
+            $.post("save.php", {data: img}, function (file) {
+            window.location.href =  "download.php?path="+ file});   
+        }
+    });
+}
+
+
+
+
+
+
+
+$("#btn").click(function(){
 
 	var myArray = [
 		"Try pairing",
