@@ -120,7 +120,28 @@ $("button").click(function(){
 		"an uneven",
 		"an unforgettable",
 		"an unfriendly",
-		"that je ne sais quoi"
+		"that je ne sais quoi",
+		"a stupid",
+		"an idiotic",
+		"a shitty",
+		"a crappy",
+		"a foolish",
+		"a dumb",
+		"a genius",
+		"an irresistable",
+		"a mind-blowing",
+		"an earth-shattering",
+		"a questionable",
+		"a miserable",
+		"a substandard",
+		"an inferior",
+		"a superior",
+		"a downright ugly",
+		"a downright sexy",
+		"a super special",
+		"a fame-destined",
+		"a passionate",
+		"a hideous",
 	];
 
 	var randomItem3 = myArray3[Math.floor(Math.random()*myArray3.length)];
@@ -152,7 +173,13 @@ $("button").click(function(){
 		"sensibility.",
 		"tone.",
 		"undercurrent.",
-		"vibe."
+		"vibe.",
+		"concept.",
+		"visual language.",
+		"sense of style.",
+		"voice.",
+		"sense of passion.",
+		"shitstorm."
 	];
 
 	var randomItem4 = myArray4[Math.floor(Math.random()*myArray4.length)];
