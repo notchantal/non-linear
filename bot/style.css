@@ -88,6 +88,8 @@ button:active {
   transform: translateY(4px);
 }
 
+button:focus {outline:0;}
+
 #download {
 	background-color: #73C6B6;
 	margin-top: 22px;
