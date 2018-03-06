@@ -103,3 +103,47 @@ button:focus {outline:0;}
 #download:active {
 	background-color: #16A085;
 }
+
+@media only screen and (max-device-width: 480px) {
+    .icon {
+	padding-left: 20px;
+	padding-top: 20px;
+	height: 40px;
+	}
+
+	h3 {
+	left: 70px;
+	top: 33px;
+	font-size: 16px;
+	letter-spacing: .5px;
+	}
+
+	.follow {
+	position: absolute;
+	display: block;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	right: 0;
+	top: 0;
+	padding-right: 20px;
+	padding-top: 31px;
+	}
+
+	h1 {
+	font-size: 26px;
+	line-height: 36px;
+	}
+
+	img {
+	height: 45px;
+	padding-left: 5px;
+	padding-right: 5px;
+	vertical-align: -35%;
+	}
+
+	.main {
+	width: 90%;
+	}
+
+}
