@@ -17,6 +17,8 @@ window.twttr = (function(d, s, id) {
 
 $("#btn").click(function(){
 
+	$("#tweetpairing").show();
+
 	var myArray = [
 		"Try pairing",
 		"Give this a shot: pair",
@@ -39,6 +41,7 @@ $("#btn").click(function(){
 	];
 
 	var randomItem = myArray[Math.floor(Math.random()*myArray.length)];
+
 
 
 	var myArray2 = [
@@ -584,9 +587,11 @@ $("#btn").click(function(){
 		"<img src=images/zigzag.png>"
 	];
 
-	var randomItem5 = myArray5[Math.floor(Math.random()*myArray5.length)];
+	var randomNumber1 = [Math.floor(Math.random()*myArray5.length)];
+	var randomItem5 = myArray5[randomNumber1];
 
 
+console.log(randomItem5);
 
 	var myArray6 = [
 		"<img src=images/abril-text.png>",
@@ -884,8 +889,8 @@ $("#btn").click(function(){
 		"<img src=images/zigzag.png>"
 	];
 
-	var randomItem6 = myArray6[Math.floor(Math.random()*myArray6.length)];
-
+	var randomNumber2 = [Math.floor(Math.random()*myArray6.length)];
+	var randomItem6 = myArray6[randomNumber2];
 
 
 	$("#t-one").html(randomItem);
@@ -895,10 +900,53 @@ $("#btn").click(function(){
 	$("#first-font").html(randomItem5);
 	$("#second-font").html(randomItem6);
 
-});
+
+  random();
+
+  function random() {
+  	// var fontname = randomItem6;
+   //  var quotes = ["Try pairing","Give this a shot: pair","Use","Pro tip: pair","Don't forget to pair","Designers: pair","Students: pair",];
+   //  var quotestwo = ["for","so your work has","to avoid","to construct","to craft","to create","to deliver","to effuse","to emit","to ensure","to establish","to exude","to fake","to generate","to give off","to guarantee"];
+   //  var quotesthree = ["a clashing","a complementary","a conceptual","a confused","a considered","a contrasting","a controversial","a cool","a crappy","a curvaceous","a deep",];
+   //  var quotesfour = ["affectation.","appearance."];
+   
+    var fontsone = ["Abril Text", "Adelle", "Adobe Caslon", "Agipo", "Aino", "Akkurat", "Aktiv Grotesk", "Akzidenz Grotesk", "Albertus", "Alright Sans", "Alternate Gothic", "Anderson Grotesk", "Ano Stencil", "Antenna", "Antique Olive", "Archer", "Arial", "Asul", "Atlas Grotesk", "Avenir Next", "Avenir", "Balboa", "Balloon", "Barracuda Script", "Baskerville", "Bello", "Belwe", "Benton Sans", "Big Caslon", "Big Noodle Titling", "Block", "Bodoni", "Bookman", "Brandon Grotesque", "Information", "Brevier", "Broadway", "Brothers", "Brush Script", "Brutal Type", "Bureau Grotesque", "Calibre", "Canela", "Century Expanded", "Century Schoolbook", "Cheltenham", "Clarendon", "Coco", "Cogito", "Comic Sans", "Compacta", "Contact ATF", "Conto", "Cooper Black", "Copperplate Gothic", "Corvinus", "Cosimo", "Curlz", "Dala Floda", "Davida", "Delphin", "Dic Sans", "Digestive", "Documan", "Dolly", "Dover Serif Text", "Druk Text Wide", "Eckmannpsych", "Elephant", "Euclid Flex", "Eurostile", "Fakt", "Favorit", "FB Titling Gothic", "Fedra Sans", "FF Din", "FF Fago", "FF Mark", "FF Meta", "Folio", "Founders Grotesk", "Frankfurter", "Franklin Gothic", "Freight Sans", "Frutiger", "Futura", "Futura Black", "Futura Condensed", "Futura Display", "Garage Gothic", "Gemeli Mono", "Geogrotesque", "Georgia", "Gill Kayo", "Gill Sans", "Gotham", "Goudy Old Style", "Granjon", "Graphik", "GT America", "GT Pressura Mono", "GT Sectra", "GT Walsheim", "Hammer", "Harbour", "Helvetica Condensed", "Helvetica", "Hobo", "Hollie Script", "House Script", "House Slant", "Icone", "Infini", "Interstate", "Italian Black Ornamented", "ITC Mendoza", "ITC Souvenir", "Jaakko", "JAF Domus", "Kabel Black", "Kabel", "Karmina Sans", "Knif Mono", "Knockout", "Krul", "Kurversbrug", "Kuzanyan", "Larish Neue", "Latin Wide", "Lato", "Le Griffe", "Letrista Script", "LL Brown", "LL Circular", "Lydian", "Lyon", "Maax", "Maison Neue", "Marvin", "Matter", "Mensch", "Mercury", "Miller", "Mineral", "Minerale", "Minion", "Miniscule", "Mistral", "Monotype Grotesque", "Morion", "Mrs. Eaves", "Museo Sans", "Neue Haas Grotesk", "Neue Helvetica", "Neutraface", "Neuzeit S", "News Gothic", "Nimbus Sans", "Noe Display", "Novel Gothic", "Old English", "Omnes", "Open Sans", "Optima", "P.T. Barnum", "Pistilli Roman", "Plaak", "Plantin", "Playbill", "Playfair Display", "Post Antiqua", "Prestige 12", "Pretorian", "Proxima Nova", "Px Grotesk", "Raisonne", "Reckless", "Sabon", "Satyr", "Savate", "Schmalfette Grotesk", "Keops Sans", "Memoriam", "Sentinel", "Serapion", "Sharp Grotesk", "Skia", "Skolar", "Sofia", "Sporting Grotesque", "Stag Stencil", "Suisse Int'l", "Suisse Works", "Sweet Sans", "Telefon", "Tempo", "Times New Roman", "Times", "Torino", "Trade Gothic", "Tuner", "Tungsten", "Twentieth Century", "Typo Upright", "Ultra Bodoni", "Ultra", "Univers Ultra Condensed", "Univers", "Venus", "Verlag", "Victor", "Vista Sans", "Whitney", "Wigrum", "Windsor", "Zenon", "Anzeigen Grotesk", "Arno", "Balboa", "Benton Sans", "Bernhard Antique", "Black Chancery", "Bluu", "Bulldog", "Carouselambra", "Caslon No. 540", "Chap", "Charlemagne", "Chiswick Serif", "Clarendon", "Columbia Titling", "Cooper", "Cortado", "Courier", "Deutsche Schrift", "Druk Condensed", "Druk", "DTL Documenta", "Eksell Display", "Favorit", "FF Mister K", "FF Scala Sans", "FF Tundra", "Fit", "Gill Facia", "Goudy Heavyface", "Goudy Text", "Grad", "Granby", "Granville", "Griffith Gothic", "GT Haptik", "GT Walsheim", "Haas Unica", "Hoefler Titling", "ITC Busorama", "ITC Johnston", "ITC Korinna", "ITC Manhattan", "ITC Tiffany", "Kauffman", "Klinic Slab", "Koloss", "Literaturnaya", "Matrix Script", "Mineral", "Neil Bold", "Nupital", "OCR-A", "Ogg", "Ostia Antica", "Pegasus", "Plakat Fraktur", "Poetica", "Poplar", "Portrait Condensed", "Portrait", "Publico", "Sabre", "Self Modern", "Sentinel", "Stainless", "Styrene A", "Styrene B", "Thirsty Script", "Totentanz", "Trajan", "Trilby", "Trim Poster", "U8", "Vogue", "Voltage", "Zigzag"];
+    var fontstwo = ["Abril Text", "Adelle", "Adobe Caslon", "Agipo", "Aino", "Akkurat", "Aktiv Grotesk", "Akzidenz Grotesk", "Albertus", "Alright Sans", "Alternate Gothic", "Anderson Grotesk", "Ano Stencil", "Antenna", "Antique Olive", "Archer", "Arial", "Asul", "Atlas Grotesk", "Avenir Next", "Avenir", "Balboa", "Balloon", "Barracuda Script", "Baskerville", "Bello", "Belwe", "Benton Sans", "Big Caslon", "Big Noodle Titling", "Block", "Bodoni", "Bookman", "Brandon Grotesque", "Information", "Brevier", "Broadway", "Brothers", "Brush Script", "Brutal Type", "Bureau Grotesque", "Calibre", "Canela", "Century Expanded", "Century Schoolbook", "Cheltenham", "Clarendon", "Coco", "Cogito", "Comic Sans", "Compacta", "Contact ATF", "Conto", "Cooper Black", "Copperplate Gothic", "Corvinus", "Cosimo", "Curlz", "Dala Floda", "Davida", "Delphin", "Dic Sans", "Digestive", "Documan", "Dolly", "Dover Serif Text", "Druk Text Wide", "Eckmannpsych", "Elephant", "Euclid Flex", "Eurostile", "Fakt", "Favorit", "FB Titling Gothic", "Fedra Sans", "FF Din", "FF Fago", "FF Mark", "FF Meta", "Folio", "Founders Grotesk", "Frankfurter", "Franklin Gothic", "Freight Sans", "Frutiger", "Futura", "Futura Black", "Futura Condensed", "Futura Display", "Garage Gothic", "Gemeli Mono", "Geogrotesque", "Georgia", "Gill Kayo", "Gill Sans", "Gotham", "Goudy Old Style", "Granjon", "Graphik", "GT America", "GT Pressura Mono", "GT Sectra", "GT Walsheim", "Hammer", "Harbour", "Helvetica Condensed", "Helvetica", "Hobo", "Hollie Script", "House Script", "House Slant", "Icone", "Infini", "Interstate", "Italian Black Ornamented", "ITC Mendoza", "ITC Souvenir", "Jaakko", "JAF Domus", "Kabel Black", "Kabel", "Karmina Sans", "Knif Mono", "Knockout", "Krul", "Kurversbrug", "Kuzanyan", "Larish Neue", "Latin Wide", "Lato", "Le Griffe", "Letrista Script", "LL Brown", "LL Circular", "Lydian", "Lyon", "Maax", "Maison Neue", "Marvin", "Matter", "Mensch", "Mercury", "Miller", "Mineral", "Minerale", "Minion", "Miniscule", "Mistral", "Monotype Grotesque", "Morion", "Mrs. Eaves", "Museo Sans", "Neue Haas Grotesk", "Neue Helvetica", "Neutraface", "Neuzeit S", "News Gothic", "Nimbus Sans", "Noe Display", "Novel Gothic", "Old English", "Omnes", "Open Sans", "Optima", "P.T. Barnum", "Pistilli Roman", "Plaak", "Plantin", "Playbill", "Playfair Display", "Post Antiqua", "Prestige 12", "Pretorian", "Proxima Nova", "Px Grotesk", "Raisonne", "Reckless", "Sabon", "Satyr", "Savate", "Schmalfette Grotesk", "Keops Sans", "Memoriam", "Sentinel", "Serapion", "Sharp Grotesk", "Skia", "Skolar", "Sofia", "Sporting Grotesque", "Stag Stencil", "Suisse Int'l", "Suisse Works", "Sweet Sans", "Telefon", "Tempo", "Times New Roman", "Times", "Torino", "Trade Gothic", "Tuner", "Tungsten", "Twentieth Century", "Typo Upright", "Ultra Bodoni", "Ultra", "Univers Ultra Condensed", "Univers", "Venus", "Verlag", "Victor", "Vista Sans", "Whitney", "Wigrum", "Windsor", "Zenon", "Anzeigen Grotesk", "Arno", "Balboa", "Benton Sans", "Bernhard Antique", "Black Chancery", "Bluu", "Bulldog", "Carouselambra", "Caslon No. 540", "Chap", "Charlemagne", "Chiswick Serif", "Clarendon", "Columbia Titling", "Cooper", "Cortado", "Courier", "Deutsche Schrift", "Druk Condensed", "Druk", "DTL Documenta", "Eksell Display", "Favorit", "FF Mister K", "FF Scala Sans", "FF Tundra", "Fit", "Gill Facia", "Goudy Heavyface", "Goudy Text", "Grad", "Granby", "Granville", "Griffith Gothic", "GT Haptik", "GT Walsheim", "Haas Unica", "Hoefler Titling", "ITC Busorama", "ITC Johnston", "ITC Korinna", "ITC Manhattan", "ITC Tiffany", "Kauffman", "Klinic Slab", "Koloss", "Literaturnaya", "Matrix Script", "Mineral", "Neil Bold", "Nupital", "OCR-A", "Ogg", "Ostia Antica", "Pegasus", "Plakat Fraktur", "Poetica", "Poplar", "Portrait Condensed", "Portrait", "Publico", "Sabre", "Self Modern", "Sentinel", "Stainless", "Styrene A", "Styrene B", "Thirsty Script", "Totentanz", "Trajan", "Trilby", "Trim Poster", "U8", "Vogue", "Voltage", "Zigzag"];
+
+    randomQuote = 
+      randomItem +
+      " " + 
+      fontsone[randomNumber1] +
+      " " + "and " +
+
+      fontstwo[randomNumber2] + " " +
+      
+      randomItem2 +
+      " " +
+      randomItem3 +
+      " " +
+      randomItem4 ;
+    
+    
+    quote = randomQuote.split("randomQuote");
+    $('.quote').text(quote[0]);
+
+    
+  }
+ 
+
+  $(".button").on("click", function() {
+    random();
+  });
 
 
  $(".twitter-share-button").click(function(){
-    $(this).attr("href", 'https://twitter.com/intent/tweet?text=' + randomItem);
+    $(this).attr("href", 'https://twitter.com/intent/tweet?text=' + randomQuote + " Courtesy of @type_matchmaker" + " at goo.gl/LQ6EYp");
   });
+
+
+ });
+
+
+
 
