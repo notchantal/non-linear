@@ -1,27 +1,18 @@
-function captureCurrentDiv()
-{
-    html2canvas([document.getElementById('main-container')], {   
-        onrendered: function(canvas)  
-        {
-            var img = canvas.toDataURL()
-            $.post("save.php", {data: img}, function (file) {
-            window.location.href =  "download.php?path="+ file});   
-        }
-    });
-}
-	
-function captureFullPage()
-	{
-		html2canvas(document.body, {  
-			onrendered: function(canvas)  
-			{
-				var img = canvas.toDataURL()
-				$.post("save.php", {data: img}, function (file) {
-				window.location.href =  "download.php?path="+ file});   
-			}
-		});
-	}
+window.twttr = (function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0],
+	    t = window.twttr || {};
+	  if (d.getElementById(id)) return t;
+	  js = d.createElement(s);
+	  js.id = id;
+	  js.src = "https://platform.twitter.com/widgets.js";
+	  fjs.parentNode.insertBefore(js, fjs);
 
+	  t._e = [];
+	  t.ready = function(f) {
+	    t._e.push(f);
+
+	};
+});
 
 
 $("#btn").click(function(){
@@ -147,7 +138,7 @@ $("#btn").click(function(){
 		"an earth-shattering",
 		"an artificial",
 		"an earthy",
-		"an eduring",
+		"an enduring",
 		"an idiotic",
 		"an inferior",
 		"an insanely boring",
@@ -905,3 +896,9 @@ $("#btn").click(function(){
 	$("#second-font").html(randomItem6);
 
 });
+
+
+ $(".twitter-share-button").click(function(){
+    $(this).attr("href", 'https://twitter.com/intent/tweet?text=' + randomItem);
+  });
+

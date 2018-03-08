@@ -80,6 +80,7 @@ button {
   	border: none;
   	box-shadow: 0 6px grey;
   	margin-top: 80px;
+  	margin-bottom: 20px;
 }
 
 button:active {
