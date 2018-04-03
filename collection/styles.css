@@ -1,14 +1,52 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+
+.cds {
+	height: 200px;
+	width: 100%;
+	display: block;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	scroll-direction: horizontal;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 0;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
 .image {
+    position: relative;
+    display: inline-block;
     width: 200px;
     height: 200px;
-    -webkit-animation:spin .08s linear infinite;
-    -moz-animation:spin .08s linear infinite;
-    animation:spin .08s linear infinite;
+    margin-right: -25px;
+    -webkit-animation:spin .075s linear infinite;
+    -moz-animation:spin .075s linear infinite;
+    animation:spin .075s linear infinite;
 }
+
+.image:hover {
+    -webkit-animation:spin 18s linear infinite;
+    -moz-animation:spin 18s linear infinite;
+    animation:spin 18s linear infinite;
+    z-index: 100;
+}
+
+.image:active {
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+    z-index: 100;
+}
+
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-
-.image:hover {
-	-webkit-animation: none;
-}
