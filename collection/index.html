@@ -1,147 +1,799 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CD Collection</title>
+	<title>CD Collection (1996–2006)</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="isotope.pkgd.min.js"></script>
 </head>
 <body>
-	<div id="main">
-		<img class="image" src="images/backstreet.png" onmouseover="document.getElementById('audio-backstreet').play()" onmouseout="document.getElementById('audio-backstreet').pause()">
+	<div class="header">
+		<div class="button-group sort-by-button-group">
+			  <button class="button is-checked" data-sort-value="original-order">Color</button>
+			  <button class="button" data-sort-value="releasedate">Release Date</button>
+			  <button class="button" data-sort-value="artist">Artist (A-Z)</button>
+			  <button class="button" data-sort-value="album">Album (A-Z)</button>
+		</div>
+		<div class="metadata">
+			<p class="data-backstreet data-hidden">
+				<em>Backstreet Boys</em><br>
+				Backstreet Boys<br>
+				June 5, 1996</p>
+			<p class="data-pharrell data-hidden">
+				<em>Frontin'</em><br>
+				Pharrell ft. Jay-Z<br>
+				June 3, 2003</p>	
+			<p class="data-usher-myway data-hidden">
+				<em>My Way</em><br>
+				Usher<br>
+				September 16, 1997</p>	
+			<p class="data-whitney-houston data-hidden">
+				<em>It's Not Right But It's Okay</em><br>
+				Whitney Houston<br>
+				January 25, 1999</p>
+			<p class="data-willsmith data-hidden">
+				<em>Big Willie Style</em><br>
+				Will Smith<br>
+				November 25, 1997</p>
+			<p class="data-muse data-hidden">
+				<em>Absolution</em><br>
+				Muse<br>
+				September 15, 2003</p>
+			<p class="data-jayz-blueprint data-hidden">
+				<em>The Blueprint</em><br>
+				Jay-Z<br>
+				September 11, 2001</p>
+			<p class="data-nsync data-hidden">
+				<em>N Sync</em><br>
+				N Sync<br>
+				May 26, 1997</p>
+			<p class="data-nodoubt data-hidden">
+				<em>The Return of Saturn</em><br>
+				No Doubt<br>
+				April 11, 2000</p>
+			<p class="data-aaliyah data-hidden">
+				<em>Don't Know What To Tell Ya</em><br>
+				Aaliyah<br>
+				May 20, 2003</p>
+			<p class="data-beyonce-dangerously data-hidden">
+				<em>Dangerously In Love</em><br>
+				Beyoncé<br>
+				June 23, 2003</p>
+			<p class="data-rhcp-sa data-hidden">
+				<em>Stadium Arcadium</em><br>
+				Red Hot Chili Peppers<br>
+				May 5, 2006</p>
+			<p class="data-rhcp data-hidden">
+				<em>Californication</em><br>
+				Red Hot Chili Peppers<br>
+				June 8, 1999</p>
+			<p class="data-norahjones data-hidden">
+				<em>Come Away With Me</em><br>
+				Norah Jones<br>
+				February 26, 2002</p>
+			<p class="data-keane data-hidden">
+				<em>Hopes and Fears</em><br>
+				Keane<br>
+				May 10, 2004</p>
+			<p class="data-arcticmonkeys data-hidden">
+				<em>Whatever People Say I Am, That’s What I’m Not</em><br>
+				Arctic Monkeys<br>
+				January 23, 2006</p>
+			<p class="data-50cent-massacre data-hidden">
+				<em>The Massacre</em><br>
+				50 Cent<br>
+				March 3, 2005</p>
+			<p class="data-lopez data-hidden">
+				<em>The Reel Me</em><br>
+				Jennifer Lopez<br>
+				November 18, 2003</p>
+			<p class="data-georgemichael data-hidden">
+				<em>Ladies & Gentlemen: The Best of George Michael</em><br>
+				George Michael<br>
+				December 2, 1998</p>
+			<p class="data-damien data-hidden">
+				<em>O</em><br>
+				Damien Rice<br>
+				February 1, 2002</p>
+			<p class="data-spice data-hidden">
+				<em>Spice</em><br>
+				Spice Girls<br>
+				September 19, 1996</p>
+			<p class="data-mambo data-hidden">
+				<em>Mambo No. 5</em><br>
+				Lou Bega<br>
+				April 19, 1999</p>
+			<p class="data-oasis data-hidden">
+				<em>(What's the Story) Morning Glory?</em><br>
+				Oasis<br>
+				October 2, 1995</p>
+			<p class="data-gwenstefani data-hidden">
+				<em>Hollaback Girl</em><br>
+				Gwen Stefani<br>
+				March 15, 2005</p>
+			<p class="data-tlc data-hidden">
+				<em>Now & Forever: The Hits</em><br>
+				TLC<br>
+				September 30, 2003</p>
+			<p class="data-eminem-mmlp data-hidden">
+				<em>The Marshall Mathers LP</em><br>
+				Eminem<br>
+				May 23, 2000</p>
+			<p class="data-akon data-hidden">
+				<em>Konvicted</em><br>
+				Akon<br>
+				November 14, 2006</p>
+			<p class="data-survivor data-hidden">
+				<em>Survivor</em><br>
+				Destiny's Child<br>
+				May 1, 2001</p>
+			<p class="data-gwenstefani-love data-hidden">
+				<em>Love. Angel. Music. Baby.</em><br>
+				Gwen Stefani<br>
+				November 12, 2004</p>
+			<p class="data-2pac-alleyez data-hidden">
+				<em>All Eyez On Me</em><br>
+				2Pac<br>
+				February 13, 1996</p>
+			<p class="data-brighteyes data-hidden">
+				<em>I'm Wide Awake, It's Morning</em><br>
+				Bright Eyes<br>
+				January 25, 2005</p>
+			<p class="data-slimshadylp data-hidden">
+				<em>The Slim Shady LP</em><br>
+				Eminem<br>
+				February 23, 1999</p>
+			<p class="data-unwritten data-hidden">
+				<em>Unwritten</em><br>
+				Natasha Bedingfield<br>
+				September 6, 2004</p>
+			<p class="data-aguilera data-hidden">
+				<em>Back to Basics</em><br>
+				Christina Aguilera<br>
+				August 9, 2006</p>
+			<p class="data-radiohead data-hidden">
+				<em>OK Computer</em><br>
+				Radiohead<br>
+				June 16, 1997</p>
+			<p class="data-akeys data-hidden">
+				<em>Songs in A Minor</em><br>
+				Alicia Keys<br>
+				June 5, 2001</p>
+			<p class="data-britney data-hidden">
+				<em>Britney</em><br>
+				Britney Spears<br>
+				October 31, 2001</p>
+			<p class="data-ironwine data-hidden">
+				<em>Our Endless Numbered Days</em><br>
+				Iron & Wine<br>
+				March 23, 2004</p>
+			<p class="data-gorillaz data-hidden">
+				<em>Demon Days</em><br>
+				Gorillaz<br>
+				May 11, 2005</p>
+			<p class="data-rage-empire data-hidden">
+				<em>Evil Empire</em><br>
+				Rage Against the Machine<br>
+				April 16, 1996</p>
+			<p class="data-thestrokes data-hidden">
+				<em>Is This It</em><br>
+				The Strokes<br>
+				June 30, 2001</p>
+			<p class="data-b2k data-hidden">
+				<em>Bump, Bump, Bump</em><br>
+				B2K<br>
+				October 23, 2002</p>
+			<p class="data-jayz-blackalbum data-hidden">
+				<em>The Black Album</em><br>
+				Jay-Z<br>
+				November 14, 2003</p>
+			<p class="data-justified data-hidden">
+				<em>Justified</em><br>
+				Justin Timberlake<br>
+				November 5, 2002</p>
+			<p class="data-evan data-hidden">
+				<em>Fallen</em><br>
+				Evanescence<br>
+				March 4, 2003</p>
+			<p class="data-aaliyah-missu data-hidden">
+				<em>Miss You</em><br>
+				Aaliyah<br>
+				November 16, 2002</p>
+			<p class="data-50cent-getrich data-hidden">
+				<em>Get Rich or Die Tryin'</em><br>
+				50 Cent<br>
+				February 6, 2003</p>
+			<p class="data-coldplay-rush data-hidden">
+				<em>A Rush of Blood to the Head</em><br>
+				Coldplay<br>
+				August 26, 2002</p>
+			<p class="data-snowpatrol data-hidden">
+				<em>Eyes Open</em><br>
+				Snow Patrol<br>
+				May 1, 2006</p>
+			<p class="data-greenday-ai data-hidden">
+				<em>American Idiot</em><br>
+				Green Day<br>
+				September 20, 2004</p>
+			<p class="data-deathrow data-hidden">
+				<em>Death Row Greatest Hits</em><br>
+				Various Artists<br>
+				November 26, 1996</p>
+			<p class="data-kanye-lr data-hidden">
+				<em>Late Registration</em><br>
+				Kanye West<br>
+				August 30, 2005</p>
+			<p class="data-avril data-hidden">
+				<em>Let Go</em><br>
+				Avril Lavigne<br>
+				June 4, 2002</p>
+			<p class="data-usher data-hidden">
+				<em>Confessions</em><br>
+				Usher<br>
+				March 23, 2004</p>
+			<p class="data-flaminglips data-hidden">
+				<em>Yoshimi Battles the Pink Robots</em><br>
+				The Flaming Lips<br>
+				July 16, 2002</p>
+			<p class="data-killers-hotfuss data-hidden">
+				<em>Hot Fuss</em><br>
+				The Killers<br>
+				June 7, 2004</p>
+			<p class="data-jaggededge data-hidden">
+				<em>Walked Outta Heaven</em><br>
+				Jagged Edge<br>
+				August 19, 2003</p>
+			<p class="data-maroon5 data-hidden">
+				<em>Songs About Jane</em><br>
+				Maroon5<br>
+				June 25, 2002</p>
+			<p class="data-jamesblunt data-hidden">
+				<em>Back to Bedlam</em><br>
+				James Blunt<br>
+				October 11, 2004</p>
+			<p class="data-whitestripes data-hidden">
+				<em>Elephant</em><br>
+				The White Stripes<br>
+				March 19, 2003</p>
+			<p class="data-outkast data-hidden">
+				<em>Stankonia</em><br>
+				Outkast<br>
+				October 31, 2000</p>
+			<p class="data-remind data-hidden">
+				<em>U Remind Me</em><br>
+				Usher<br>
+				May 19, 2001</p>
+			<p class="data-nsync-nostrings data-hidden">
+				<em>No Strings Attached</em><br>
+				N Sync<br>
+				March 21, 2000</p>
+			<p class="data-kanye-cd data-hidden">
+				<em>The College Dropout</em><br>
+				Kanye West<br>
+				February 10, 2004</p>
+			<p class="data-britney-oops data-hidden">
+				<em>Oops!... I Did It Again</em><br>
+				Britney Spears<br>
+				May 16, 2000</p>
+		</div>
+	</div>
 
-		<img class="image" src="images/pharrell.png" onmouseover="document.getElementById('audio-pharrell').play()" onmouseout="document.getElementById('audio-pharrell').pause()">
+	<div class="something">
+		<div class="element-item img-backstreet">
+			<img class="image" src="images/backstreet.png" onmouseover="document.getElementById('audio-backstreet').play()" onmouseout="document.getElementById('audio-backstreet').pause()">
+			<p class="album">Backstreet Boys</p>
+			<p class="artist">Backstreet Boys</p>
+			<p class="releasedate">19960506</p>
+		</div>
 
-		<img class="image" src="images/usher-myway.png" onmouseover="document.getElementById('audio-usher-myway').play()" onmouseout="document.getElementById('audio-usher-myway').pause()">
+		<div class="element-item img-pharrell">
+			<img class="image" src="images/pharrell.png" onmouseover="document.getElementById('audio-pharrell').play()" onmouseout="document.getElementById('audio-pharrell').pause()">
+			<p class="album">Frontin'</p>
+			<p class="artist">Pharrell ft. Jay-Z</p>
+			<p class="releasedate">20030603</p>
+		</div>
 
-		<img class="image" src="images/whitney-houston.png" onmouseover="document.getElementById('audio-whitney-houston').play()" onmouseout="document.getElementById('audio-whitney-houston').pause()">
-
-		<img class="image" src="images/willsmith.png" onmouseover="document.getElementById('audio-willsmith').play()" onmouseout="document.getElementById('audio-willsmith').pause()">
-
-		<img class="image" src="images/muse.png" onmouseover="document.getElementById('audio-muse').play()" onmouseout="document.getElementById('audio-muse').pause()">
-
-		<img class="image" src="images/jayz-blueprint.png" onmouseover="document.getElementById('audio-jayz-blueprint').play()" onmouseout="document.getElementById('audio-jayz-blueprint').pause()">
-
-		<img class="image" src="images/nsync.png" onmouseover="document.getElementById('audio-nsync').play()" onmouseout="document.getElementById('audio-nsync').pause()">
-
-		<img class="image" src="images/nodoubt.png" onmouseover="document.getElementById('audio-nodoubt').play()" onmouseout="document.getElementById('audio-nodoubt').pause()">
-
-		<img class="image" src="images/aaliyah.png" onmouseover="document.getElementById('audio-aaliyah').play()" onmouseout="document.getElementById('audio-aaliyah').pause()">
-
-		<img class="image" src="images/beyonce-dangerously.png" onmouseover="document.getElementById('audio-beyonce-dangerously').play()" onmouseout="document.getElementById('audio-beyonce-dangerously').pause()">
-
-		<img class="image" src="images/rhcp-sa.png" onmouseover="document.getElementById('audio-rhcp-sa').play()" onmouseout="document.getElementById('audio-rhcp-sa').pause()">
-
-		<img class="image" src="images/rhcp.png" onmouseover="document.getElementById('audio-rhcp').play()" onmouseout="document.getElementById('audio-rhcp').pause()">
-
-		<img class="image" src="images/norahjones.png" onmouseover="document.getElementById('audio-norahjones').play()" onmouseout="document.getElementById('audio-norahjones').pause()">
-
-		<img class="image" src="images/keane.png" onmouseover="document.getElementById('audio-keane').play()" onmouseout="document.getElementById('audio-keane').pause()">
-
-		<img class="image" src="images/arcticmonkeys.png" onmouseover="document.getElementById('audio-arcticmonkeys').play()" onmouseout="document.getElementById('audio-arcticmonkeys').pause()">
-
-		<img class="image" src="images/50cent-massacre.png" onmouseover="document.getElementById('audio-50cent-massacre').play()" onmouseout="document.getElementById('audio-50cent-massacre').pause()">
-
-		<img class="image" src="images/lopez.png" onmouseover="document.getElementById('audio-lopez').play()" onmouseout="document.getElementById('audio-lopez').pause()">
-
-		<img class="image" src="images/georgemichael.png" onmouseover="document.getElementById('audio-georgemichael').play()" onmouseout="document.getElementById('audio-georgemichael').pause()">
-
-		<img class="image" src="images/damien.png" onmouseover="document.getElementById('audio-damien').play()" onmouseout="document.getElementById('audio-damien').pause()">
-
-		<img class="image" src="images/spice.png" onmouseover="document.getElementById('audio-spice').play()" onmouseout="document.getElementById('audio-spice').pause()">
-
-		<img class="image" src="images/mambo.png" onmouseover="document.getElementById('audio-mambo').play()" onmouseout="document.getElementById('audio-mambo').pause()">
+		<div class="element-item img-usher-myway">
+			<img class="image" src="images/usher-myway.png" onmouseover="document.getElementById('audio-usher-myway').play()" onmouseout="document.getElementById('audio-usher-myway').pause()">
+			<p class="album">My Way</p>
+			<p class="artist">Usher</p>
+			<p class="releasedate">19970916</p>
+		</div>
 		
-		<img class="image" src="images/oasis.png" onmouseover="document.getElementById('audio-oasis').play()" onmouseout="document.getElementById('audio-oasis').pause()">
+		<div class="element-item img-whitney-houston">
+			<img class="image" src="images/whitney-houston.png" onmouseover="document.getElementById('audio-whitney-houston').play()" onmouseout="document.getElementById('audio-whitney-houston').pause()">
+			<p class="album">It's Not Right But It's Okay</p>
+			<p class="artist">Whitney Houston</p>
+			<p class="releasedate">19990125</p>
+		</div>
+		
+		<div class="element-item img-willsmith">
+			<img class="image" src="images/willsmith.png" onmouseover="document.getElementById('audio-willsmith').play()" onmouseout="document.getElementById('audio-willsmith').pause()">
+			<p class="album">Big Willie Style</p>
+			<p class="artist">Will Smith</p>
+			<p class="releasedate">19971125</p>
+		</div>
+		
+		<div class="element-item img-muse">
+			<img class="image" src="images/muse.png" onmouseover="document.getElementById('audio-muse').play()" onmouseout="document.getElementById('audio-muse').pause()">
+			<p class="album">Absolution</p>
+			<p class="artist">Muse</p>
+			<p class="releasedate">20030915</p>
+		</div>
+		
+		<div class="element-item img-jayz-blueprint">
+			<img class="image" src="images/jayz-blueprint.png" onmouseover="document.getElementById('audio-jayz-blueprint').play()" onmouseout="document.getElementById('audio-jayz-blueprint').pause()">
+			<p class="album">The Blueprint</p>
+			<p class="artist">Jay-Z</p>
+			<p class="releasedate">20010911</p>
+		</div>
+		
+		<div class="element-item img-nsync">
+			<img class="image" src="images/nsync.png" onmouseover="document.getElementById('audio-nsync').play()" onmouseout="document.getElementById('audio-nsync').pause()">
+			<p class="album">N Sync</p>
+			<p class="artist">N Sync</p>
+			<p class="releasedate">19970526</p>
+		</div>
+		
+		<div class="element-item img-nodoubt">
+			<img class="image" src="images/nodoubt.png" onmouseover="document.getElementById('audio-nodoubt').play()" onmouseout="document.getElementById('audio-nodoubt').pause()">
+			<p class="album">The Return of Saturn</p>
+			<p class="artist">No Doubt</p>
+			<p class="releasedate">20000411</p>
+		</div>
+		
+		<div class="element-item img-aaliyah">
+			<img class="image" src="images/aaliyah.png" onmouseover="document.getElementById('audio-aaliyah').play()" onmouseout="document.getElementById('audio-aaliyah').pause()">
+			<p class="album">Don't Know What To Tell Ya</p>
+			<p class="artist">Aaliyah</p>
+			<p class="releasedate">20030520</p>
+		</div>
+		
+		<div class="element-item img-beyonce-dangerously">
+			<img class="image" src="images/beyonce-dangerously.png" onmouseover="document.getElementById('audio-beyonce-dangerously').play()" onmouseout="document.getElementById('audio-beyonce-dangerously').pause()">
+			<p class="album">Dangerously In Love</p>
+			<p class="artist">Beyoncé</p>
+			<p class="releasedate">20030623</p>
+		</div>
+		
+		<div class="element-item img-rhcp-sa">
+			<img class="image" src="images/rhcp-sa.png" onmouseover="document.getElementById('audio-rhcp-sa').play()" onmouseout="document.getElementById('audio-rhcp-sa').pause()">
+			<p class="album">Stadium Arcadium</p>
+			<p class="artist">Red Hot Chili Peppers</p>
+			<p class="releasedate">20060505</p>
+		</div>
+		
+		<div class="element-item img-rhcp">
+			<img class="image" src="images/rhcp.png" onmouseover="document.getElementById('audio-rhcp').play()" onmouseout="document.getElementById('audio-rhcp').pause()">
+			<p class="album">Californication</p>
+			<p class="artist">Red Hot Chili Peppers</p>
+			<p class="releasedate">19990608</p>
+		</div>
+		
+		<div class="element-item img-norahjones">
+			<img class="image" src="images/norahjones.png" onmouseover="document.getElementById('audio-norahjones').play()" onmouseout="document.getElementById('audio-norahjones').pause()">
+			<p class="album">Come Away With Me</p>
+			<p class="artist">Norah Jones</p>
+			<p class="releasedate">20020226</p>
+		</div>
+		
 
-		<img class="image" src="images/gwenstefani.png" onmouseover="document.getElementById('audio-gwenstefani').play()" onmouseout="document.getElementById('audio-gwenstefani').pause()">
+		<div class="element-item img-keane">
+			<img class="image" src="images/keane.png" onmouseover="document.getElementById('audio-keane').play()" onmouseout="document.getElementById('audio-keane').pause()">
+			<p class="album">Hopes and Fears</p>
+			<p class="artist">Keane</p>
+			<p class="releasedate">20040510</p>
+		</div>
+		
 
-		<img class="image" src="images/tlc.png" onmouseover="document.getElementById('audio-tlc').play()" onmouseout="document.getElementById('audio-tlc').pause()">
+		<div class="element-item img-arcticmonkeys">
+			<img class="image" src="images/arcticmonkeys.png" onmouseover="document.getElementById('audio-arcticmonkeys').play()" onmouseout="document.getElementById('audio-arcticmonkeys').pause()">
+			<p class="album">Whatever People Say I Am, That’s What I’m Not</p>
+			<p class="artist">Arctic Monkeys</p>
+			<p class="releasedate">20060123</p>
+		</div>
+		
 
-		<img class="image" src="images/eminem-mmlp.png" onmouseover="document.getElementById('audio-eminem-mmlp').play()" onmouseout="document.getElementById('audio-eminem-mmlp').pause()">
+		<div class="element-item img-50cent-massacre">
+			<img class="image" src="images/50cent-massacre.png" onmouseover="document.getElementById('audio-50cent-massacre').play()" onmouseout="document.getElementById('audio-50cent-massacre').pause()">
+			<p class="album">The Massacre</p>
+			<p class="artist">50 Cent</p>
+			<p class="releasedate">20050303</p>
+		</div>
+		
 
-		<img class="image" src="images/akon.png" onmouseover="document.getElementById('audio-akon').play()" onmouseout="document.getElementById('audio-akon').pause()">
+		<div class="element-item img-lopez">
+			<img class="image" src="images/lopez.png" onmouseover="document.getElementById('audio-lopez').play()" onmouseout="document.getElementById('audio-lopez').pause()">
+			<p class="album">The Reel Me</p>
+			<p class="artist">Jennifer Lopez</p>
+			<p class="releasedate">20031118</p>
+		</div>
+		
 
-		<img class="image" src="images/survivor.png" onmouseover="document.getElementById('audio-survivor').play()" onmouseout="document.getElementById('audio-survivor').pause()">
+		<div class="element-item img-georgemichael">
+			<img class="image" src="images/georgemichael.png" onmouseover="document.getElementById('audio-georgemichael').play()" onmouseout="document.getElementById('audio-georgemichael').pause()">
+			<p class="album">Ladies & Gentlemen: The Best of George Michael</p>
+			<p class="artist">George Michael</p>
+			<p class="releasedate">19981202</p>
+		</div>
+		
 
-		<img class="image" src="images/gwenstefani-love.png" onmouseover="document.getElementById('audio-gwenstefani-love').play()" onmouseout="document.getElementById('audio-gwenstefani-love').pause()">
+		<div class="element-item img-damien">
+			<img class="image" src="images/damien.png" onmouseover="document.getElementById('audio-damien').play()" onmouseout="document.getElementById('audio-damien').pause()">
+			<p class="album">O</p>
+			<p class="artist">Damien Rice</p>
+			<p class="releasedate">20020201</p>
+		</div>
+		
 
-		<img class="image" src="images/2pac-alleyez.png" onmouseover="document.getElementById('audio-2pac-alleyez').play()" onmouseout="document.getElementById('audio-2pac-alleyez').pause()">
+		<div class="element-item img-spice">
+			<img class="image" src="images/spice.png" onmouseover="document.getElementById('audio-spice').play()" onmouseout="document.getElementById('audio-spice').pause()">
+			<p class="album">Spice</p>
+			<p class="artist">Spice Girls</p>
+			<p class="releasedate">19960919</p>
+		</div>
+		
 
-		<img class="image" src="images/brighteyes.png" onmouseover="document.getElementById('audio-brighteyes').play()" onmouseout="document.getElementById('audio-brighteyes').pause()">
+		<div class="element-item img-mambo">
+			<img class="image" src="images/mambo.png" onmouseover="document.getElementById('audio-mambo').play()" onmouseout="document.getElementById('audio-mambo').pause()">
+			<p class="album">Mambo No. 5</p>
+			<p class="artist">Lou Bega</p>
+			<p class="releasedate">19990419</p>
+		</div>
+		
+		
+		<div class="element-item img-oasis">
+			<img class="image" src="images/oasis.png" onmouseover="document.getElementById('audio-oasis').play()" onmouseout="document.getElementById('audio-oasis').pause()">
+			<p class="album">(What's the Story) Morning Glory?</p>
+			<p class="artist">Oasis</p>
+			<p class="releasedate">19951002</p>
+		</div>
+		
 
-		<img class="image" src="images/slimshadylp.png" onmouseover="document.getElementById('audio-slimshadylp').play()" onmouseout="document.getElementById('audio-slimshadylp').pause()">
+		<div class="element-item img-gwenstefani">
+			<img class="image" src="images/gwenstefani.png" onmouseover="document.getElementById('audio-gwenstefani').play()" onmouseout="document.getElementById('audio-gwenstefani').pause()">
+			<p class="album">Hollaback Girl</p>
+			<p class="artist">Gwen Stefani</p>
+			<p class="releasedate">20050315</p>
+		</div>
+		
 
-		<img class="image" src="images/unwritten.png" onmouseover="document.getElementById('audio-unwritten').play()" onmouseout="document.getElementById('audio-unwritten').pause()">
+		<div class="element-item img-tlc">
+			<img class="image" src="images/tlc.png" onmouseover="document.getElementById('audio-tlc').play()" onmouseout="document.getElementById('audio-tlc').pause()">
+			<p class="album">Now & Forever: The Hits</p>
+			<p class="artist">TLC</p>
+			<p class="releasedate">20030930</p>
+		</div>
+		
 
-		<img class="image" src="images/aguilera.png" onmouseover="document.getElementById('audio-aguilera').play()" onmouseout="document.getElementById('audio-aguilera').pause()">
+		<div class="element-item img-eminem-mmlp">
+			<img class="image" src="images/eminem-mmlp.png" onmouseover="document.getElementById('audio-eminem-mmlp').play()" onmouseout="document.getElementById('audio-eminem-mmlp').pause()">
+			<p class="album">The Marshall Mathers LP</p>
+			<p class="artist">Eminem</p>
+			<p class="releasedate">20000523</p>
+		</div>
+		
 
-		<img class="image" src="images/greenday.png" onmouseover="document.getElementById('audio-greenday').play()" onmouseout="document.getElementById('audio-greenday').pause()">
+		<div class="element-item img-akon">
+			<img class="image" src="images/akon.png" onmouseover="document.getElementById('audio-akon').play()" onmouseout="document.getElementById('audio-akon').pause()">
+			<p class="album">Konvicted</p>
+			<p class="artist">Akon</p>
+			<p class="releasedate">20061114</p>
+		</div>
+		
 
-		<img class="image" src="images/radiohead.png" onmouseover="document.getElementById('audio-radiohead').play()" onmouseout="document.getElementById('audio-radiohead').pause()">
+		<div class="element-item img-survivor">
+			<img class="image" src="images/survivor.png" onmouseover="document.getElementById('audio-survivor').play()" onmouseout="document.getElementById('audio-survivor').pause()">
+			<p class="album">Survivor</p>
+			<p class="artist">Destiny's Child</p>
+			<p class="releasedate">20010501</p>
+		</div>
+		
 
-		<img class="image" src="images/akeys.png" onmouseover="document.getElementById('audio-akeys').play()" onmouseout="document.getElementById('audio-akeys').pause()">
+		<div class="element-item img-gwenstefani-love">
+			<img class="image" src="images/gwenstefani-love.png" onmouseover="document.getElementById('audio-gwenstefani-love').play()" onmouseout="document.getElementById('audio-gwenstefani-love').pause()">
+			<p class="album">Love. Angel. Music. Baby.</p>
+			<p class="artist">Gwen Stefani</p>
+			<p class="releasedate">20041112</p>
+		</div>
+		
 
-		<img class="image" src="images/britney.png" onmouseover="document.getElementById('audio-britney').play()" onmouseout="document.getElementById('audio-britney').pause()">
+		<div class="element-item img-2pac-alleyez">
+			<img class="image" src="images/2pac-alleyez.png" onmouseover="document.getElementById('audio-2pac-alleyez').play()" onmouseout="document.getElementById('audio-2pac-alleyez').pause()">
+			<p class="album">All Eyez On Me</p>
+			<p class="artist">2Pac</p>
+			<p class="releasedate">19960213</p>
+		</div>
+		
 
-		<img class="image" src="images/dre.png" onmouseover="document.getElementById('audio-dre').play()" onmouseout="document.getElementById('audio-dre').pause()">
+		<div class="element-item img-brighteyes">
+			<img class="image" src="images/brighteyes.png" onmouseover="document.getElementById('audio-brighteyes').play()" onmouseout="document.getElementById('audio-brighteyes').pause()">
+			<p class="album">I'm Wide Awake, It's Morning</p>
+			<p class="artist">Bright Eyes</p>
+			<p class="releasedate">20050125</p>
+		</div>
+		
 
-		<img class="image" src="images/ironwine.png" onmouseover="document.getElementById('audio-ironwine').play()" onmouseout="document.getElementById('audio-ironwine').pause()">
+		<div class="element-item img-slimshadylp">
+			<img class="image" src="images/slimshadylp.png" onmouseover="document.getElementById('audio-slimshadylp').play()" onmouseout="document.getElementById('audio-slimshadylp').pause()">
+			<p class="album">The Slim Shady LP</p>
+			<p class="artist">Eminem</p>
+			<p class="releasedate">19990223</p>
+		</div>
+		
 
-		<img class="image" src="images/gorillaz.png" onmouseover="document.getElementById('audio-gorillaz').play()" onmouseout="document.getElementById('audio-gorillaz').pause()">
+		<div class="element-item img-unwritten">
+			<img class="image" src="images/unwritten.png" onmouseover="document.getElementById('audio-unwritten').play()" onmouseout="document.getElementById('audio-unwritten').pause()">
+			<p class="album">Unwritten</p>
+			<p class="artist">Natasha Bedingfield</p>
+			<p class="releasedate">20040906</p>
+		</div>
+		
 
-		<img class="image" src="images/rage-empire.png" onmouseover="document.getElementById('audio-rage-empire').play()" onmouseout="document.getElementById('audio-rage-empire').pause()">
+		<div class="element-item img-aguilera">
+			<img class="image" src="images/aguilera.png" onmouseover="document.getElementById('audio-aguilera').play()" onmouseout="document.getElementById('audio-aguilera').pause()">
+			<p class="album">Back to Basics</p>
+			<p class="artist">Christina Aguilera</p>
+			<p class="releasedate">20060809</p>
+		</div>
 
-		<img class="image" src="images/thestrokes.png" onmouseover="document.getElementById('audio-thestrokes').play()" onmouseout="document.getElementById('audio-thestrokes').pause()">
 
-		<img class="image" src="images/b2k.png" onmouseover="document.getElementById('audio-b2k').play()" onmouseout="document.getElementById('audio-b2k').pause()">
+		<div class="element-item img-radiohead">
+			<img class="image" src="images/radiohead.png" onmouseover="document.getElementById('audio-radiohead').play()" onmouseout="document.getElementById('audio-radiohead').pause()">
+			<p class="album">OK Computer</p>
+			<p class="artist">Radiohead</p>
+			<p class="releasedate">19970616</p>
+		</div>
+		
 
-		<img class="image" src="images/jayz-blackalbum.png" onmouseover="document.getElementById('audio-jayz-blackalbum').play()" onmouseout="document.getElementById('audio-jayz-blackalbum').pause()">
+		<div class="element-item img-akeys">
+			<img class="image" src="images/akeys.png" onmouseover="document.getElementById('audio-akeys').play()" onmouseout="document.getElementById('audio-akeys').pause()">
+			<p class="album">Songs in A Minor</p>
+			<p class="artist">Alicia Keys</p>
+			<p class="releasedate">20010605</p>
+		</div>
+		
 
-		<img class="image" src="images/justified.png" onmouseover="document.getElementById('audio-justified').play()" onmouseout="document.getElementById('audio-justified').pause()">
+		<div class="element-item img-britney">
+			<img class="image" src="images/britney.png" onmouseover="document.getElementById('audio-britney').play()" onmouseout="document.getElementById('audio-britney').pause()">
+			<p class="album">Britney</p>
+			<p class="artist">Britney Spears</p>
+			<p class="releasedate">20011031</p>
+		</div>
+		
 
-		<img class="image" src="images/evan.png" onmouseover="document.getElementById('audio-evan').play()" onmouseout="document.getElementById('audio-evan').pause()">
+		<div class="element-item img-dre">
+			<img class="image" src="images/dre.png" onmouseover="document.getElementById('audio-dre').play()" onmouseout="document.getElementById('audio-dre').pause()">
+			<p class="album">Album</p>
+			<p class="artist">Dr. Dre</p>
+			<p class="releasedate">19991116</p>
+		</div>
+		
 
-		<img class="image" src="images/aaliyah-missu.png" onmouseover="document.getElementById('audio-aaliyah-missu').play()" onmouseout="document.getElementById('audio-aaliyah-missu').pause()">
+		<div class="element-item img-ironwine">
+			<img class="image" src="images/ironwine.png" onmouseover="document.getElementById('audio-ironwine').play()" onmouseout="document.getElementById('audio-ironwine').pause()">
+			<p class="album">Our Endless Numbered Days</p>
+			<p class="artist">Iron & Wine</p>
+			<p class="releasedate">20040323</p>
+		</div>
+		
 
-		<img class="image" src="images/50cent-getrich.png" onmouseover="document.getElementById('audio-50cent-getrich').play()" onmouseout="document.getElementById('audio-50cent-getrich').pause()">
+		<div class="element-item img-gorillaz">
+			<img class="image" src="images/gorillaz.png" onmouseover="document.getElementById('audio-gorillaz').play()" onmouseout="document.getElementById('audio-gorillaz').pause()">
+			<p class="album">Demon Days</p>
+			<p class="artist">Gorillaz</p>
+			<p class="releasedate">20050511</p>
+		</div>
+		
 
-		<img class="image" src="images/coldplay-rush.png" onmouseover="document.getElementById('audio-coldplay-rush').play()" onmouseout="document.getElementById('audio-coldplay-rush').pause()">
+		<div class="element-item img-rage-empire">
+			<img class="image" src="images/rage-empire.png" onmouseover="document.getElementById('audio-rage-empire').play()" onmouseout="document.getElementById('audio-rage-empire').pause()">
+			<p class="album">Evil Empire</p>
+			<p class="artist">Rage Against the Machine</p>
+			<p class="releasedate">19960416</p>
+		</div>
+		
 
-		<img class="image" src="images/snowpatrol.png" onmouseover="document.getElementById('audio-snowpatrol').play()" onmouseout="document.getElementById('audio-snowpatrol').pause()">
+		<div class="element-item img-thestrokes">
+			<img class="image" src="images/thestrokes.png" onmouseover="document.getElementById('audio-thestrokes').play()" onmouseout="document.getElementById('audio-thestrokes').pause()">
+			<p class="album">Is This It</p>
+			<p class="artist">The Strokes</p>
+			<p class="releasedate">20010630</p>
+		</div>
+		
 
-		<img class="image" src="images/greenday-ai.png" onmouseover="document.getElementById('audio-greenday-ai').play()" onmouseout="document.getElementById('audio-greenday-ai').pause()">
+		<div class="element-item img-b2k">
+			<img class="image" src="images/b2k.png" onmouseover="document.getElementById('audio-b2k').play()" onmouseout="document.getElementById('audio-b2k').pause()">
+			<p class="album">Bump, Bump, Bump</p>
+			<p class="artist">B2K</p>
+			<p class="releasedate">20021023</p>
+		</div>
+		
 
-		<img class="image" src="images/deathrow.png" onmouseover="document.getElementById('audio-deathrow').play()" onmouseout="document.getElementById('audio-deathrow').pause()">
+		<div class="element-item img-jayz-blackalbum">
+			<img class="image" src="images/jayz-blackalbum.png" onmouseover="document.getElementById('audio-jayz-blackalbum').play()" onmouseout="document.getElementById('audio-jayz-blackalbum').pause()">
+			<p class="album">The Black Album</p>
+			<p class="artist">Jay-Z</p>
+			<p class="releasedate">20031114</p>
+		</div>
+		
 
-		<img class="image" src="images/kanye-lr.png" onmouseover="document.getElementById('audio-kanye-lr').play()" onmouseout="document.getElementById('audio-kanye-lr').pause()">
+		<div class="element-item img-justified">
+			<img class="image" src="images/justified.png" onmouseover="document.getElementById('audio-justified').play()" onmouseout="document.getElementById('audio-justified').pause()">
+			<p class="album">Justified</p>
+			<p class="artist">Justin Timberlake</p>
+			<p class="releasedate">20021105</p>
+		</div>
+		
 
-		<img class="image" src="images/avril.png" onmouseover="document.getElementById('audio-avril').play()" onmouseout="document.getElementById('audio-avril').pause()">
+		<div class="element-item img-evan">
+			<img class="image" src="images/evan.png" onmouseover="document.getElementById('audio-evan').play()" onmouseout="document.getElementById('audio-evan').pause()">
+			<p class="album">Fallen</p>
+			<p class="artist">Evanescence</p>
+			<p class="releasedate">20030304</p>
+		</div>
+	
 
-		<img class="image" src="images/usher.png" onmouseover="document.getElementById('audio-usher').play()" onmouseout="document.getElementById('audio-usher').pause()">
+		<div class="element-item img-aaliyah-missu">
+			<img class="image" src="images/aaliyah-missu.png" onmouseover="document.getElementById('audio-aaliyah-missu').play()" onmouseout="document.getElementById('audio-aaliyah-missu').pause()">
+			<p class="album">Miss You</p>
+			<p class="artist">Aaliyah</p>
+			<p class="releasedate">20021116</p>
+		</div>
+		
 
-		<img class="image" src="images/flaminglips.png" onmouseover="document.getElementById('audio-flaminglips').play()" onmouseout="document.getElementById('audio-flaminglips').pause()">
+		<div class="element-item img-50cent-getrich">
+			<img class="image" src="images/50cent-getrich.png" onmouseover="document.getElementById('audio-50cent-getrich').play()" onmouseout="document.getElementById('audio-50cent-getrich').pause()">
+			<p class="album">Get Rich or Die Tryin'</p>
+			<p class="artist">50 Cent</p>
+			<p class="releasedate">20030206</p>
+		</div>
+		
 
-		<img class="image" src="images/killers-hotfuss.png" onmouseover="document.getElementById('audio-killers-hotfuss').play()" onmouseout="document.getElementById('audio-killers-hotfuss').pause()">
+		<div class="element-item img-coldplay-rush">
+			<img class="image" src="images/coldplay-rush.png" onmouseover="document.getElementById('audio-coldplay-rush').play()" onmouseout="document.getElementById('audio-coldplay-rush').pause()">
+			<p class="album">A Rush of Blood to the Head</p>
+			<p class="artist">Coldplay</p>
+			<p class="releasedate">20020826</p>
+		</div>
+		
 
-		<img class="image" src="images/jaggededge.png" onmouseover="document.getElementById('audio-jaggededge').play()" onmouseout="document.getElementById('audio-jaggededge').pause()">
+		<div class="element-item img-snowpatrol">
+			<img class="image" src="images/snowpatrol.png" onmouseover="document.getElementById('audio-snowpatrol').play()" onmouseout="document.getElementById('audio-snowpatrol').pause()">
+			<p class="album">Eyes Open</p>
+			<p class="artist">Snow Patrol</p>
+			<p class="releasedate">20060501</p>
+		</div>
+		
 
-		<img class="image" src="images/maroon5.png" onmouseover="document.getElementById('audio-maroon5').play()" onmouseout="document.getElementById('audio-maroon5').pause()">
+		<div class="element-item img-greenday-ai">
+			<img class="image" src="images/greenday-ai.png" onmouseover="document.getElementById('audio-greenday-ai').play()" onmouseout="document.getElementById('audio-greenday-ai').pause()">
+			<p class="album">American Idiot</p>
+			<p class="artist">Green Day</p>
+			<p class="releasedate">20040920</p>
+		</div>
+		
 
-		<img class="image" src="images/jamesblunt.png" onmouseover="document.getElementById('audio-jamesblunt').play()" onmouseout="document.getElementById('audio-jamesblunt').pause()">
+		<div class="element-item img-deathrow">
+			<img class="image" src="images/deathrow.png" onmouseover="document.getElementById('audio-deathrow').play()" onmouseout="document.getElementById('audio-deathrow').pause()">
+			<p class="album">Death Row Greatest Hits</p>
+			<p class="artist">Compilation</p>
+			<p class="releasedate">19961126</p>
+		</div>
+		
 
-		<img class="image" src="images/whitestripes.png" onmouseover="document.getElementById('audio-whitestripes').play()" onmouseout="document.getElementById('audio-whitestripes').pause()">
+		<div class="element-item img-kanye-lr">
+			<img class="image" src="images/kanye-lr.png" onmouseover="document.getElementById('audio-kanye-lr').play()" onmouseout="document.getElementById('audio-kanye-lr').pause()">
+			<p class="album">Late Registration</p>
+			<p class="artist">Kanye West</p>
+			<p class="releasedate">20050830</p>
+		</div>
+		
 
-		<img class="image" src="images/outkast.png" onmouseover="document.getElementById('audio-outkast').play()" onmouseout="document.getElementById('audio-outkast').pause()">
+		<div class="element-item img-avril">
+			<img class="image" src="images/avril.png" onmouseover="document.getElementById('audio-avril').play()" onmouseout="document.getElementById('audio-avril').pause()">
+			<p class="album">Let Go</p>
+			<p class="artist">Avril Lavigne</p>
+			<p class="releasedate">20020604</p>
+		</div>
+		
 
-		<img class="image" src="images/usher-remind.png" onmouseover="document.getElementById('audio-usher-remind').play()" onmouseout="document.getElementById('audio-usher-remind').pause()">
+		<div class="element-item img-usher">
+			<img class="image" src="images/usher.png" onmouseover="document.getElementById('audio-usher').play()" onmouseout="document.getElementById('audio-usher').pause()">
+			<p class="album">Confessions</p>
+			<p class="artist">Usher</p>
+			<p class="releasedate">20040323</p>
+		</div>
+		
 
-		<img class="image" src="images/nsync-nostrings.png" onmouseover="document.getElementById('audio-nsync-nostrings').play()" onmouseout="document.getElementById('audio-nsync-nostrings').pause()">
+		<div class="element-item img-flaminglips">
+			<img class="image" src="images/flaminglips.png" onmouseover="document.getElementById('audio-flaminglips').play()" onmouseout="document.getElementById('audio-flaminglips').pause()">
+			<p class="album">Yoshimi Battles the Pink Robots</p>
+			<p class="artist">The Flaming Lips</p>
+			<p class="releasedate">20020716</p>
+		</div>
+		
 
-		<img class="image" src="images/cure-wish.png" onmouseover="document.getElementById('audio-cure-wish').play()" onmouseout="document.getElementById('audio-cure-wish').pause()">
+		<div class="element-item img-killers-hotfuss">
+			<img class="image" src="images/killers-hotfuss.png" onmouseover="document.getElementById('audio-killers-hotfuss').play()" onmouseout="document.getElementById('audio-killers-hotfuss').pause()">
+			<p class="album">Hot Fuss</p>
+			<p class="artist">The Killers</p>
+			<p class="releasedate">20040607</p>
+		</div>
+		
 
-		<img class="image" src="images/kanye-cd.png" onmouseover="document.getElementById('audio-kanye-cd').play()" onmouseout="document.getElementById('audio-kanye-cd').pause()">
+		<div class="element-item img-jaggededge">
+			<img class="image" src="images/jaggededge.png" onmouseover="document.getElementById('audio-jaggededge').play()" onmouseout="document.getElementById('audio-jaggededge').pause()">
+			<p class="album">Album</p>
+			<p class="artist">Jagged Edge</p>
+			<p class="releasedate">20030819</p>
+		</div>
+		
 
-		<img class="image" src="images/britney-oops.png" onmouseover="document.getElementById('audio-britney-oops').play()" onmouseout="document.getElementById('audio-britney-oops').pause()">
+		<div class="element-item img-maroon5">
+			<img class="image" src="images/maroon5.png" onmouseover="document.getElementById('audio-maroon5').play()" onmouseout="document.getElementById('audio-maroon5').pause()">
+			<p class="album">Songs About Jane</p>
+			<p class="artist">Maroon 5</p>
+			<p class="releasedate">20020625</p>
+		</div>
+		
+
+		<div class="element-item img-jamesblunt">
+			<img class="image" src="images/jamesblunt.png" onmouseover="document.getElementById('audio-jamesblunt').play()" onmouseout="document.getElementById('audio-jamesblunt').pause()">
+			<p class="album">Back to Bedlam</p>
+			<p class="artist">James Blunt</p>
+			<p class="releasedate">20041011</p>
+		</div>
+		
+
+		<div class="element-item img-whitestripes">
+			<img class="image" src="images/whitestripes.png" onmouseover="document.getElementById('audio-whitestripes').play()" onmouseout="document.getElementById('audio-whitestripes').pause()">
+			<p class="album">Elephant</p>
+			<p class="artist">The White Stripes</p>
+			<p class="releasedate">20030319</p>
+		</div>
+		
+
+		<div class="element-item img-outkast">
+			<img class="image" src="images/outkast.png" onmouseover="document.getElementById('audio-outkast').play()" onmouseout="document.getElementById('audio-outkast').pause()">
+			<p class="album">Stankonia</p>
+			<p class="artist">Outkast</p>
+			<p class="releasedate">20001031</p>
+		</div>
+		
+
+		<div class="element-item img-remind">
+			<img class="image" src="images/usher-remind.png" onmouseover="document.getElementById('audio-usher-remind').play()" onmouseout="document.getElementById('audio-usher-remind').pause()">
+			<p class="album">U Remind Me</p>
+			<p class="artist">Usher</p>
+			<p class="releasedate">20010519</p>
+		</div>
+		
+
+		<div class="element-item img-nsync-nostrings">
+			<img class="image" src="images/nsync-nostrings.png" onmouseover="document.getElementById('audio-nsync-nostrings').play()" onmouseout="document.getElementById('audio-nsync-nostrings').pause()">
+			<p class="album">No Strings Attached</p>
+			<p class="artist">N Sync</p>
+			<p class="releasedate">20000321</p>
+		</div>
+
+
+		<div class="element-item img-kanye-cd">
+			<img class="image" src="images/kanye-cd.png" onmouseover="document.getElementById('audio-kanye-cd').play()" onmouseout="document.getElementById('audio-kanye-cd').pause()">
+			<p class="album">The College Dropout</p>
+			<p class="artist">Kanye West</p>
+			<p class="releasedate">20040210</p>
+		</div>
+		
+
+		<div class="element-item img-britney-oops">
+			<img class="image" src="images/britney-oops.png" onmouseover="document.getElementById('audio-britney-oops').play()" onmouseout="document.getElementById('audio-britney-oops').pause()">
+			<p class="album">Oops!... I Did It Again</p>
+			<p class="artist">Britney Spears</p>
+			<p class="releasedate">20000516</p>
+		</div>
+		
 	</div>
 
 	<audio id="audio-backstreet" class="audio" src="audio/backstreet.wav"></audio>
@@ -214,7 +866,8 @@
 	<audio id="audio-whitestripes" class="audio" src="audio/whitestripes.wav"></audio>
 
 
-	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>
+
 	<script type="text/javascript" src="script.js"></script>
+
 </body>
 </html>
