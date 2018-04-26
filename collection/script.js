@@ -18,31 +18,6 @@
 })();
 
 
-var $grid = $('.something').isotope({
-  itemSelector: '.element-item',
-  layoutMode: 'fitRows',
-  getSortData: {
-    album: '.album',
-    artist: '.artist',
-    releasedate: '.releasedate parseInt',
-  }
-});
-
-// bind sort button click
-$(".sort-by-button-group").on('click', 'button', function() {
-  var sortValue = $(this).attr('data-sort-value');
-  $grid.isotope({ sortBy: sortValue });
-});
-
-// change is-checked class on buttons
-$('.button-group').each( function( i, buttonGroup ) {
-  var $buttonGroup = $( buttonGroup );
-  $buttonGroup.on( 'click', 'button', function() {
-    $buttonGroup.find('.is-checked').removeClass('is-checked');
-    $( this ).addClass('is-checked');
-  });
-});
-
 $('.img-backstreet').hover( function() {
   $('.data-backstreet').toggleClass('data-hidden');
 });
