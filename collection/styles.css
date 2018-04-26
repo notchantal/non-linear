@@ -69,7 +69,7 @@ p {
 .something{
   position: absolute !important;
   width: auto;
-  height: 125px;
+  height: 160px;
   top: 50%;
   transform: translateY(-50%);
   list-style: none;
